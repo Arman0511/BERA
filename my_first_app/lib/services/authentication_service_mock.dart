@@ -1,4 +1,3 @@
-
 import 'package:dartz/dartz.dart';
 
 import '../exception/app_exception.dart';

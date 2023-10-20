@@ -14,44 +14,22 @@ class ResponderHomepageView extends StackedView<ResponderHomepageViewModel> {
   ) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Responder Home'),
+        title: Text('Incident Details'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
+      body: Center(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Text(
-              'Welcome, [Responder Name]!',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Navigate to alerts screen
+          children: <Widget>[
+            ListView.builder(
+              shrinkWrap: true,
+              itemCount: 5, // Adjust as needed
+              itemBuilder: (context, index) {
+                return ElevatedButton(
+                  onPressed: () {
+                    // Handle the specific incident based on the index.
+                  },
+                  child: Text('Incident ${index + 1}'),
+                );
               },
-              child: const Text('View Alerts'),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                // Navigate to clusters screen
-              },
-              child: const Text('View Clusters'),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () {
-                // Navigate to profile screen
-              },
-              child: const Text('View Profile'),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                // Sign out logic
-              },
-              child: const Text('Sign Out'),
             ),
           ],
         ),

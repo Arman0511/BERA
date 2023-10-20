@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
-import 'package:firebase_auth/firebase_auth.dart'hide User;
+import 'package:firebase_auth/firebase_auth.dart' hide User;
 import 'package:get_it/get_it.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:my_first_app/app/app.locator.dart';
@@ -15,7 +15,6 @@ import '../ui/common/firebase_constants.dart';
 class AuthenticationServiceImpl implements AuthenticationService {
   final auth = FirebaseAuth.instance;
   final db = FirebaseFirestore.instance;
-
 
   @override
   Future<Either<AppException, None>> signup(
@@ -55,12 +54,6 @@ class AuthenticationServiceImpl implements AuthenticationService {
     }
   }
 
-
-
   @override
   bool get isLoggedIn => auth.currentUser != null;
-
-
 }
-
-

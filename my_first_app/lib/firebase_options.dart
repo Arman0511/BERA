@@ -67,8 +67,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '712554653780',
     projectId: 'bera-7e072',
     storageBucket: 'bera-7e072.appspot.com',
-    androidClientId: '712554653780-ba76gr0phqopbescm6eq8t2si5v8pj9v.apps.googleusercontent.com',
-    iosClientId: '712554653780-4bf8vcbb53d6qvaaj2utkibo6fimbbfj.apps.googleusercontent.com',
+    androidClientId:
+        '712554653780-ba76gr0phqopbescm6eq8t2si5v8pj9v.apps.googleusercontent.com',
+    iosClientId:
+        '712554653780-4bf8vcbb53d6qvaaj2utkibo6fimbbfj.apps.googleusercontent.com',
     iosBundleId: 'com.example.myFirstApp',
   );
 
@@ -78,8 +80,10 @@ class DefaultFirebaseOptions {
     messagingSenderId: '712554653780',
     projectId: 'bera-7e072',
     storageBucket: 'bera-7e072.appspot.com',
-    androidClientId: '712554653780-ba76gr0phqopbescm6eq8t2si5v8pj9v.apps.googleusercontent.com',
-    iosClientId: '712554653780-ab7ac2ela0tgfdvi9n9to6m9l2g9difu.apps.googleusercontent.com',
+    androidClientId:
+        '712554653780-ba76gr0phqopbescm6eq8t2si5v8pj9v.apps.googleusercontent.com',
+    iosClientId:
+        '712554653780-ab7ac2ela0tgfdvi9n9to6m9l2g9difu.apps.googleusercontent.com',
     iosBundleId: 'com.example.myFirstApp.RunnerTests',
   );
 }

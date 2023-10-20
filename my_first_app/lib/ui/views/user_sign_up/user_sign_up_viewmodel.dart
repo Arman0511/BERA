@@ -1,4 +1,4 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:my_first_app/app/app.router.dart';
 import 'package:stacked/stacked.dart';
 import 'package:stacked_services/stacked_services.dart';
@@ -8,7 +8,7 @@ import '../../../services/authentication_service.dart';
 import '../../common/app_constants.dart';
 import '../../common/app_exception_constants.dart';
 
-class ResponderSignUpViewModel extends BaseViewModel {
+class UserSignUpViewModel extends BaseViewModel {
   final nameTextController = TextEditingController();
   final emailTextController = TextEditingController();
   final passwordTextController = TextEditingController();
@@ -16,6 +16,13 @@ class ResponderSignUpViewModel extends BaseViewModel {
   final _authenticationService = locator<AuthenticationService>();
   final _navigatorService = locator<NavigationService>();
   final _snackBarService = locator<SnackbarService>();
+
+  bool obscureText = true;
+
+  void visibility() {
+    obscureText = !obscureText;
+    notifyListeners();
+  }
 
   Future<void> signupPressed() async {
     final verifyForm = validateForm();
@@ -40,6 +47,10 @@ class ResponderSignUpViewModel extends BaseViewModel {
         _navigatorService.replaceWithLoginView();
       });
     }
+  }
+
+  void goToLoginPage() {
+    _navigatorService.replaceWithLoginView();
   }
 
   String? validateForm() {

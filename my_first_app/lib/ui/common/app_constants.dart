@@ -20,23 +20,27 @@ class AppConstants {
 
   static const enterNewEmail = "Enter New Email";
 
-  static const emailChangeSuccessfullyText = "Email Successfully Change! Try to login";
+  static const emailChangeSuccessfullyText =
+      "Email Successfully Change! Try to login";
 
   static const currentNameText = "Current name";
 
   static const newNameText = "New name";
 
-  static const nameSuccessfullyChangeText = "Name Successfully Change! Try to login";
+  static const nameSuccessfullyChangeText =
+      "Name Successfully Change! Try to login";
 
   static const matchPassword = "Match Password";
 
-  static const passwordChangedSuccessfullyText = "Password Successfully Change! Try to login";
+  static const passwordChangedSuccessfullyText =
+      "Password Successfully Change! Try to login";
 
   static const pickGalleryText = "Pick Gallery";
 
   static const profileChangeSuccessfullyText = "Profile change successfully!";
 
-  static const passwordResetLinkText = "Password reset link sent! Check your email";
+  static const passwordResetLinkText =
+      "Password reset link sent! Check your email";
 
   static const nextText = "Next";
 
@@ -60,12 +64,14 @@ class AppConstants {
 
   static const appIntroGuideKey = 'APP_INTRO_KEY';
 
+  static const medicalEmergencyText = "Medical Emergency";
+  static const helpText = "HELP!!";
   static const logInText = "Log in";
   static const signUpText = "Sign up";
   static const continueText = "Continue";
-  static const purchaseText = "Purchase";
-  static const yourCourseText = "Your Courses";
-  static const savedText = "Saved";
+  static const medText = "Medical Emergency";
+  static const fireText = "Fire Emergency";
+  static const policeText = "Police Emergency";
   static const paymentText = "Payment";
   static const logoutText = "Log out";
   static const profileText = "Profile";
@@ -132,5 +138,4 @@ class AppConstants {
   static const String quizDescriptionText =
       "Let's put your memory on this topic test. \nSolve task and check your knowledge.";
   static const String quizText = "Quiz";
-
 }

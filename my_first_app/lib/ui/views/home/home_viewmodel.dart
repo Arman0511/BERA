@@ -8,29 +8,43 @@ import 'package:stacked_services/stacked_services.dart';
 class HomeViewModel extends BaseViewModel {
   final _dialogService = locator<DialogService>();
   final _bottomSheetService = locator<BottomSheetService>();
+  final _snackbarSer = locator<SnackbarService>();
 
-  String get counterLabel => 'Counter is: $_counter';
+  bool btnMedSelected = false;
+  bool btnFireSelected = false;
+  bool btnPoliceSelected = false;
 
-  int _counter = 0;
+  Future<void> helpPressed() async {
+    if (btnFireSelected == false &&
+        btnMedSelected == false &&
+        btnPoliceSelected == false) {
+      _snackbarSer.showSnackbar(
+          message: "Select Emergency Concern!",
+          duration: const Duration(seconds: 1));
+      return;
+    }
 
-  void incrementCounter() {
-    _counter++;
+    _snackbarSer.showSnackbar(
+        message: "Rescue Coming!, You're Dead if None!",
+        duration: const Duration(seconds: 2));
+    btnMedSelected = false;
+    btnFireSelected = false;
+    btnPoliceSelected = false;
     rebuildUi();
   }
 
-  void showDialog() {
-    _dialogService.showCustomDialog(
-      variant: DialogType.infoAlert,
-      title: 'Stacked Rocks!',
-      description: 'Give stacked $_counter stars on Github',
-    );
+  void medPressed() {
+    btnMedSelected = !btnMedSelected;
+    rebuildUi();
   }
 
-  void showBottomSheet() {
-    _bottomSheetService.showCustomSheet(
-      variant: BottomSheetType.notice,
-      title: ksHomeBottomSheetTitle,
-      description: ksHomeBottomSheetDescription,
-    );
+  void firePressed() {
+    btnFireSelected = !btnFireSelected;
+    rebuildUi();
+  }
+
+  void policePressed() {
+    btnPoliceSelected = !btnPoliceSelected;
+    rebuildUi();
   }
 }

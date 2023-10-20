@@ -22,17 +22,17 @@ class ResponderSignUpView extends StackedView<ResponderSignUpViewModel> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-             TextField(
+            TextField(
               controller: viewModel.nameTextController,
               decoration: const InputDecoration(labelText: 'Full Name'),
             ),
             const SizedBox(height: 10),
-             TextField(
+            TextField(
               controller: viewModel.emailTextController,
               decoration: const InputDecoration(labelText: 'Email'),
             ),
             const SizedBox(height: 10),
-             TextField(
+            TextField(
               controller: viewModel.passwordTextController,
               decoration: const InputDecoration(labelText: 'Password'),
               obscureText: true,

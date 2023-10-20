@@ -13,6 +13,7 @@ import '../services/authentication_service.dart';
 import '../services/authentication_service_impl.dart';
 import '../services/authentication_service_mock.dart';
 import '../services/shared_pref_service.dart';
+import 'package:my_first_app/ui/views/user_sign_up/user_sign_up_view.dart';
 // @stacked-import
 
 @StackedApp(
@@ -23,6 +24,7 @@ import '../services/shared_pref_service.dart';
     MaterialRoute(page: SignUpSelectionView),
     MaterialRoute(page: ResponderSignUpView),
     MaterialRoute(page: ResponderHomepageView),
+    MaterialRoute(page: UserSignUpView),
 // @stacked-route
   ],
   dependencies: [
@@ -41,15 +43,14 @@ import '../services/shared_pref_service.dart';
         asType: AuthenticationService),
 
     // @stacked-service
-
   ],
   bottomsheets: [
     StackedBottomsheet(classType: NoticeSheet),
     // @stacked-bottom-sheet
   ],
-dialogs: [
-StackedDialog(classType: InfoAlertDialog),
+  dialogs: [
+    StackedDialog(classType: InfoAlertDialog),
 // @stacked-dialog
-],
+  ],
 )
 class App {}
