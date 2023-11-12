@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../common/app_constants.dart';
 import 'login_viewmodel.dart';
 
 class LoginView extends StackedView<LoginViewModel> {
@@ -43,10 +44,15 @@ class LoginView extends StackedView<LoginViewModel> {
             ),
             const SizedBox(height: 10.0),
             TextButton(
-              onPressed: () {
-                // Navigate to sign up page
-              },
-              child: const Text('Don\'t have an account? Sign Up'),
+               onPressed: viewModel.signUp,
+                          child: const Text(
+                            AppConstants.signUpText,
+                            style: TextStyle(
+                              color: Color(0xFF78746D),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
             ),
           ],
         ),
