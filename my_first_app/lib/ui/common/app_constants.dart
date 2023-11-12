@@ -66,6 +66,8 @@ class AppConstants {
 
   static const medicalEmergencyText = "Medical Emergency";
   static const helpText = "HELP!!";
+  static const responderText = "I'm a Responder";
+  static const userText = "I'm a NormalUser";
   static const incident1Text = "Incident 1";
   static const logInText = "Log in";
   static const signUpText = "Sign up";

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
 
+import '../../common/app_constants.dart';
 import 'sign_up_selection_viewmodel.dart';
 
 class SignUpSelectionView extends StackedView<SignUpSelectionViewModel> {
@@ -20,17 +21,27 @@ class SignUpSelectionView extends StackedView<SignUpSelectionViewModel> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             ElevatedButton(
-              onPressed: () {
-                // Add login logic here
-              },
-              child: const Text('I\'m a Responder'),
+               onPressed: viewModel.responder,
+                          child: const Text(
+                            AppConstants.responderText,
+                            style: TextStyle(
+                              color: Color(0xFF78746D),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
             ),
             const SizedBox(height: 20.0),
             ElevatedButton(
-              onPressed: () {
-                // Add login logic here
-              },
-              child: const Text('I\'m a Normal User'),
+               onPressed: viewModel.user,
+                          child: const Text(
+                            AppConstants.userText,
+                            style: TextStyle(
+                              color: Color(0xFF78746D),
+                              fontSize: 14,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
             ),
           ],
         ),
