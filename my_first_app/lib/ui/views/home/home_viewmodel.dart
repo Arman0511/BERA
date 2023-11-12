@@ -25,8 +25,7 @@ class HomeViewModel extends BaseViewModel {
     }
 
     _snackbarSer.showSnackbar(
-        message: "Rescue Coming!, You're Dead if None!",
-        duration: const Duration(seconds: 2));
+        message: "Rescue Coming!!", duration: const Duration(seconds: 2));
     btnMedSelected = false;
     btnFireSelected = false;
     btnPoliceSelected = false;
